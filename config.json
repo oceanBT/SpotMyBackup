@@ -1,7 +1,0 @@
-config = {
-"uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/",
-"redirect_uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/login.html",
-"client_id":"[YOUR_TOKEN_HERE]",
-"slowdown_import": 500,
-"slowdown_export": 200
-};
