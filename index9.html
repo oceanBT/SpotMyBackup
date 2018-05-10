@@ -184,8 +184,7 @@
 
 
 var conf = {
-"uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/index8.html",
-"redirect_uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/login5.html",
+"redirect_uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/login6.html",
 "client_id":"[YOUR_TOKEN_HERE]",
 "slowdown_import": 500,
 "slowdown_export": 200
@@ -489,6 +488,10 @@ function addToStarred(trackUri) {
     });
 }
 
+            function handleSavedRequestsWithTimeout(arr, callback) {
+        setTimeout(function() { console.log("Fast runners are dead runners!"); handleSavedRequests(arr, callback) }, conf.slowdown_import);
+}
+            
 function handleSavedRequests(arr, callback) {
     var url = arr.pop();
     if (url) {
@@ -506,7 +509,7 @@ function handleSavedRequests(arr, callback) {
             }
         })
         .always(function () {
-            handleSavedRequests(arr, callback);
+            handleSavedRequestsWithTimeout(arr, callback);
         });
     } else {
         callback();
