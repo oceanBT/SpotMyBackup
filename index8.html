@@ -184,8 +184,8 @@
 
 
 var conf = {
-"uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/index7.html",
-"redirect_uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/login4.html",
+"uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/index8.html",
+"redirect_uri":"https://rawgit.com/oceanBT/SpotMyBackup/master/login5.html",
 "client_id":"[YOUR_TOKEN_HERE]",
 "slowdown_import": 500,
 "slowdown_export": 200
@@ -279,9 +279,6 @@ function login() {
 }
 
 function authCallback(event){
-    if (event.origin !== conf.uri) {
-        return;
-    }
     if (authWindow) {
         authWindow.close();
     }
