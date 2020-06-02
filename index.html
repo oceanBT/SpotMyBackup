@@ -651,7 +651,7 @@ function loadStarred(url, arr, callback) {
         },
         success: function(data) {         
             if (!data) return;
-            if ('tracks' in data && 'href' in data.tracks) {
+            if ('tracks' in data && data.tracks != null) {
                 loadTrackChunks(data.tracks.href, arr, callback);
             } else {
                 callback();
